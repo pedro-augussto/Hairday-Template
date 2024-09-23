@@ -2,6 +2,7 @@ import dayjs from "dayjs";
 
 import { oppeningHours } from "../../utils/oppening-hours.js";
 
+const hours = document.getElementById("hours");
 
 export function hoursLoad({date}){
     const oppening = oppeningHours.map((hour) => {
@@ -18,5 +19,17 @@ export function hoursLoad({date}){
             available: isHourPast,
         }
 
+    })
+    
+    //Renderizar os horarios
+    
+    oppening.forEach(({hour , available}) => {
+        const li = document.createElement("li");
+        
+        li.classList.add("hour");
+        li.classList.add(available ? "hour-available" : "hour-unavailable");
+        
+        li.textContent = hour;
+        hours.append(li);
     })
 }
