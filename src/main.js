@@ -10,4 +10,8 @@ import"./styles/schedule.css"
 
 import dayjs  from "dayjs";
 
-console.log(dayjs().format("HH:mm"));
+
+
+//JS
+
+import "./modules/form/submite.js"

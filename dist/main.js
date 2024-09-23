@@ -16,7 +16,7 @@
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nObject(function webpackMissingModule() { var e = new Error(\"Cannot find module 'daysj'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }());\n/* harmony import */ var dayjs_locale_pt_br__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! dayjs/locale/pt-br */ \"./node_modules/dayjs/locale/pt-br.js\");\n/* harmony import */ var dayjs_locale_pt_br__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(dayjs_locale_pt_br__WEBPACK_IMPORTED_MODULE_1__);\n\n\nObject(function webpackMissingModule() { var e = new Error(\"Cannot find module 'daysj'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(\"pt-br\");\n\n//# sourceURL=webpack://hairday/./src/libs/dayjs.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! dayjs */ \"./node_modules/dayjs/dayjs.min.js\");\n/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var dayjs_locale_pt_br__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! dayjs/locale/pt-br */ \"./node_modules/dayjs/locale/pt-br.js\");\n/* harmony import */ var dayjs_locale_pt_br__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(dayjs_locale_pt_br__WEBPACK_IMPORTED_MODULE_1__);\n\n\ndayjs__WEBPACK_IMPORTED_MODULE_0___default().locale(\"pt-br\");\n\n//# sourceURL=webpack://hairday/./src/libs/dayjs.js?");
 
 /***/ }),
 
@@ -27,7 +27,17 @@ eval("__webpack_require__.r(__webpack_exports__);\nObject(function webpackMissin
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _libs_dayjs_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./libs/dayjs.js */ \"./src/libs/dayjs.js\");\n/* harmony import */ var _styles_global_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/global.css */ \"./src/styles/global.css\");\n/* harmony import */ var _styles_form_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles/form.css */ \"./src/styles/form.css\");\n/* harmony import */ var _styles_schedule_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/schedule.css */ \"./src/styles/schedule.css\");\n/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! dayjs */ \"./node_modules/dayjs/dayjs.min.js\");\n/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_4__);\n\n\n//Configuração do dayjs\n\n\n// CSS\n\n\n\n\nconsole.log(dayjs__WEBPACK_IMPORTED_MODULE_4___default()().format(\"HH:mm\"));\n\n//# sourceURL=webpack://hairday/./src/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _libs_dayjs_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./libs/dayjs.js */ \"./src/libs/dayjs.js\");\n/* harmony import */ var _styles_global_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/global.css */ \"./src/styles/global.css\");\n/* harmony import */ var _styles_form_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles/form.css */ \"./src/styles/form.css\");\n/* harmony import */ var _styles_schedule_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/schedule.css */ \"./src/styles/schedule.css\");\n/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! dayjs */ \"./node_modules/dayjs/dayjs.min.js\");\n/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _modules_form_submite_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/form/submite.js */ \"./src/modules/form/submite.js\");\n/* harmony import */ var _modules_form_submite_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_modules_form_submite_js__WEBPACK_IMPORTED_MODULE_5__);\n\n\n//Configuração do dayjs\n\n\n// CSS\n\n\n\n\nconsole.log(dayjs__WEBPACK_IMPORTED_MODULE_4___default()().format(\"HH:mm\"));\n\n//JS\n\n\n\n//# sourceURL=webpack://hairday/./src/main.js?");
+
+/***/ }),
+
+/***/ "./src/modules/form/submite.js":
+/*!*************************************!*\
+  !*** ./src/modules/form/submite.js ***!
+  \*************************************/
+/***/ (() => {
+
+eval("var form = document.querySelector(\"form\");\nform.onsubmit = function (event) {\n  event.preventDefault();\n  console.log(\"Enviado\");\n};\n\n//# sourceURL=webpack://hairday/./src/modules/form/submite.js?");
 
 /***/ }),
 
