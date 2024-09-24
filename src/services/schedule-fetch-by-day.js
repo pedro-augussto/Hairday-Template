@@ -11,7 +11,7 @@ export async function scheduleFetchByDay ({ date }) {
 
         //Filtra pos agendamentos pelos dia selecionados
         const dailySchedules = data.filter((schedule) => 
-            dayjs(date).isSame(schedule.when, "date")
+            dayjs(date).isSame(schedule.when, "day")
         );
 
         return dailySchedules;

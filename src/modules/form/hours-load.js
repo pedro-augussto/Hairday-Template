@@ -2,24 +2,30 @@ import dayjs from "dayjs";
 
 import { openingHours } from "../../utils/opening-hours.js";
 import { hoursClick } from "./hours-click.js";
+import { scheduleFetchByDay } from "../../services/schedule-fetch-by-day.js";
 
 const hours = document.getElementById("hours");
 
-export function hoursLoad({date}){
+export function hoursLoad({date, dailySchedules}){
     //Limpa a lista de horarios
     hours.innerHTML = "";
+
+    //Obtem a lista de horarios ocupados
+    const unavailableHours =  dailySchedules.map((schedule) => dayjs(schedule.when).format("HH:mm"));
+
     const opening = openingHours.map((hour) => {
         //Recupera somenta as horas
         const [scheduleHour] = hour.split(":");
 
 
         //Adiciona a hora na data e verifica se esta no passado
-        const isHourPast = dayjs(date).add(scheduleHour, "hour").isAfter(dayjs());
+        const isHourPast = dayjs(date).add(scheduleHour, "hour").isBefore(dayjs());
         
+        const available = !unavailableHours.includes(hour) && !isHourPast;
         //Define se o horario esta disponivel
         return {
             hour,
-            available: isHourPast,
+            available,
         }
     });
     //Renderizar os horarios
