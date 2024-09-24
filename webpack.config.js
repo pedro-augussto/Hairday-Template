@@ -1,5 +1,5 @@
 const path = require('path');
-const HtlmWebpackPlugin = require("html-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
@@ -21,7 +21,7 @@ module.exports = {
         liveReload: true,
     },
 
-    plugins : [new HtlmWebpackPlugin ({
+    plugins : [new HtmlWebpackPlugin ({
         template: path.resolve(__dirname, "index.html"),
         favicon: path.resolve("src","assets","scissors.svg"),
      }),
