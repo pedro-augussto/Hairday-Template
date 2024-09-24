@@ -1,11 +1,14 @@
 import dayjs from "dayjs";
 
-import { oppeningHours } from "../../utils/oppening-hours.js";
+import { openingHours } from "../../utils/opening-hours.js";
+import { hoursClick } from "./hours-click.js";
 
 const hours = document.getElementById("hours");
 
 export function hoursLoad({date}){
-    const oppening = oppeningHours.map((hour) => {
+    //Limpa a lista de horarios
+    hours.innerHTML = "";
+    const opening = openingHours.map((hour) => {
         //Recupera somenta as horas
         const [scheduleHour] = hour.split(":");
 
@@ -18,12 +21,10 @@ export function hoursLoad({date}){
             hour,
             available: isHourPast,
         }
-
     });
-    
     //Renderizar os horarios
     
-    oppening.forEach(({hour , available}) => {
+    opening.forEach(({hour , available}) => {
         const li = document.createElement("li");
         
         li.classList.add("hour");
