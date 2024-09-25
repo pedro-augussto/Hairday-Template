@@ -16,5 +16,6 @@ import dayjs  from "dayjs";
 
 import "./modules/form/submite.js";
 import "./modules/form/date-change.js"
+import "./modules/schedules/cancel.js"
 
 import "./modules/page-load.js";
