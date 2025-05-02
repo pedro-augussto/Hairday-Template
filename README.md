@@ -39,10 +39,14 @@ Hairday-Template/
 
    ```bash
    git clone https://github.com/pedro-augussto/Hairday-Template.git
+   ```
+   
+   ```bash
    npm install
    npm start
    http://localhost:3000
    ```
+   
 
 📦 Scripts Disponíveis
 
